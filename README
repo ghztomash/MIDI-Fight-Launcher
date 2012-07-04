@@ -1,0 +1,40 @@
+Tomash Ghz
+www.tomashg.com
+
+Ableton Live MIDI Remote Script for MIDI Fighter Pro
+
+-----------
+DESCRIPTION
+-----------
+
+This is a Ableton Live MIDI sript made fro the MF Pro to mimic some basic behavior of the Launchpad. Like launching clips, arming, muting tracks, etc.
+The mapping consits of 4 pages.
+Page 1: is the General control page and consists of tempo controls, global play, stop and record and the controls to move around the "red box"
+Page 2: is the Track control page. Each row corresponds to one of the rows inside of the red box. And it consits of Track select, Mut, Arm and Solo.
+Page 3: is the Clip control page, you have a 4x3 grid and the top row is the stop button for each track.
+Page 4: is the drum rack pad. It plays the highlighted 4x4 grid in the drum rack. Make sure that the drum track is Armed and the Track input is On in the
+Midi preferences page.
+
+Also the knobs and faders get automatically mapped to the first effect device of the selected track.
+
+You can find more details and demonstrational video on my website http://www.tomashg.com/
+
+-----
+SETUP
+-----
+
+1. Extract the zip file inside Ableton's MIDI Remote Scripts folder. 
+Located in C:\Program Files (x86)\Ableton\Live x.x\Resources\MIDI Remote Scripts\MIDI_Fight_Launcher under Windos or
+\Live x.x\Live.app\Contents\App-Resources\MIDI Remote Scripts for Mac OSX
+
+2. Rename the extracted folder to 'MIDI_Fight_Launcher'
+
+3. Launch Ableton Live and go to Preferences. Under MIDI Sync tap select MIDI Fight Launcher in the Control SUrface drop down list and set the 
+correct input and output MIDI ports. Also make sure that the Track is set to On for the Drum Rack page to function properly.
+
+
+----------
+DISCLAIMER
+----------
+
+THESE FILES ARE PROVIDED AS-IS, WITHOUT ANY WARRANTY, EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO FITNESS FOR ANY PARTICULAR PURPOSE.

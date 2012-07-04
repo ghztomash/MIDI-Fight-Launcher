@@ -27,6 +27,7 @@ from MIDI_Map import *
 #MIDI_CC_TYPE = 1
 #MIDI_PB_TYPE = 2
 
+
 class MIDI_Fighter_APC(ControlSurface):
     __doc__ = " Script for MIDI Fighter in APC emulation mode "
 
@@ -90,7 +91,7 @@ class MIDI_Fighter_APC(ControlSurface):
                 clip_slot.set_launch_button(button)
         self._session_zoom = SpecialZoomingComponent(self._session)   
         self._session_zoom.name = 'Session_Overview'
-        self._session_zoom.set_nav_buttons(self._note_map[ZOOMUP], self._note_map[ZOOMDOWN], self._note_map[ZOOMLEFT], self._note_map[ZOOMRIGHT])	
+        self._session_zoom.set_nav_buttons(self._note_map[ZOOMUP], self._note_map[ZOOMDOWN], self._note_map[ZOOMLEFT], self._note_map[ZOOMRIGHT])    
 
     def _setup_mixer_control(self):
         is_momentary = True
@@ -153,6 +154,7 @@ class MIDI_Fighter_APC(ControlSurface):
         transport.set_overdub_button(self._note_map[OVERDUB])
         transport.set_metronome_button(self._note_map[METRONOME])
         transport.set_tempo_control(self._ctrl_map[TEMPOCONTROL])
+        transport.set_tempo_bumpers(ButtonElement(True, MIDI_NOTE_TYPE, 2, 50),ButtonElement(True, MIDI_NOTE_TYPE, 2, 49))
         transport.set_loop_button(self._note_map[LOOP])
         transport.set_seek_buttons(self._note_map[SEEKFWD], self._note_map[SEEKRWD])        
         transport.set_punch_buttons(self._note_map[PUNCHIN], self._note_map[PUNCHOUT])        

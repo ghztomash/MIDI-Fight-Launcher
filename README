@@ -23,13 +23,15 @@ You can find more details and demonstrational video on my website http://www.tom
 SETUP
 -----
 
-1. Extract the zip file inside Ableton's MIDI Remote Scripts folder. 
+1. Make sure that your MIDI Fighter Pro is set in 4 banks mode.
+
+2. Extract the zip file inside Ableton's MIDI Remote Scripts folder. 
 Located in C:\Program Files (x86)\Ableton\Live x.x\Resources\MIDI Remote Scripts\MIDI_Fight_Launcher under Windos or
 \Live x.x\Live.app\Contents\App-Resources\MIDI Remote Scripts for Mac OSX
 
-2. Rename the extracted folder to 'MIDI_Fight_Launcher'
+3. Rename the extracted folder to 'MIDI_Fight_Launcher'
 
-3. Launch Ableton Live and go to Preferences. Under MIDI Sync tap select MIDI Fight Launcher in the Control SUrface drop down list and set the 
+4. Launch Ableton Live and go to Preferences. Under MIDI Sync tap select MIDI Fight Launcher in the Control SUrface drop down list and set the 
 correct input and output MIDI ports. Also make sure that the Track is set to On for the Drum Rack page to function properly.
 
 

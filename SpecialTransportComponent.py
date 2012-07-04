@@ -266,3 +266,27 @@ class SpecialTransportComponent(TransportComponent):
         if self.is_enabled():
             fraction = ((TEMPO_TOP - TEMPO_BOTTOM) / 127.0)
             self.song().tempo = ((fraction * value) + TEMPO_BOTTOM)
+
+    def _replace_controller(self, attrname, cb, new_control):
+        old_control = getattr(self, attrname, None)
+        if old_control is not None:
+            old_control.remove_value_listener(cb)
+        setattr(self, attrname, new_control)
+        new_control.add_value_listener(cb)
+        self.update()
+
+    def set_tempo_bumpers(self, bump_up_control, bump_down_control):
+        self._replace_controller('_tempo_bump_up_control', self._tempo_up_value, bump_up_control)
+        self._replace_controller('_tempo_bump_down_control', self._tempo_down_value, bump_down_control)
+
+    def _tempo_shift(self, amount):
+        old_tempo = self.song().tempo
+        self.song().tempo = max(20, min(999, old_tempo + amount))
+
+    def _tempo_up_value(self, value):
+        if value!=0:
+            self._tempo_shift(1.0)
+
+    def _tempo_down_value(self, value):
+        if value!=0:
+            self._tempo_shift(-1.0)
